@@ -1,3 +1,11 @@
-p {
+footer {
+  background-color: rgb(14, 13, 13);
+  color: white;
   text-align: center;
+  height: 100px;
+  padding-top: 30px;
+}
+
+a {
+  color: rgb(133, 116, 133);
 }
