@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
+Loja games is a project made with the objective to train my skills in Frontend Web Development for the Full Stacker Programmer 
+course of SENAI
+
+The technologies used are:
+
+* Angular
+* HTML5
+* CSS3
+* Type Script
+* Java script
+* Bootstrap
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
