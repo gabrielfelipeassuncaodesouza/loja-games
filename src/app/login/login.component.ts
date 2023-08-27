@@ -17,6 +17,5 @@ export class LoginComponent {
   fazerLogin() {
     this._loginService.login(this.user, this.password);
     this._router.navigate(["/restrito/lista"]);
-    this._loginService.setMostraMenu(false);
   }
 }
