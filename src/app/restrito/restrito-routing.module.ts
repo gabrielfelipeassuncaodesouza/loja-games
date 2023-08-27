@@ -4,12 +4,13 @@ import { CreateProductComponent } from "./create-product/create-product.componen
 import { ReadProductComponent } from "./read-product/read-product.component";
 import { UpdateProductComponent } from "./update-product/update-product.component";
 import { NgModule } from "@angular/core";
+import { GuardGuard } from "../guard.guard";
 
 const restritoRoutes: Routes = [
   { path: 'restrito', component: RestritoComponent, children: [
-    { path: 'cadastro', component: CreateProductComponent},
-    { path: 'lista', component: ReadProductComponent},
-    { path: 'editar/:id', component: UpdateProductComponent}
+    { path: 'cadastro', component: CreateProductComponent, canActivate: [GuardGuard]},
+    { path: 'lista', component: ReadProductComponent, canActivate: [GuardGuard]},
+    { path: 'editar/:id', component: UpdateProductComponent, canActivate: [GuardGuard]}
 
   ]},
 

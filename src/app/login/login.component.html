@@ -6,14 +6,12 @@
 
     <div class="mb-3 row">
     <label for="user" class="col-sm-2 col-form-label">Email</label>
-    <input type="text" class="form-control" id="user" placeholder="example@prov.dom">
+    <input type="text" class="form-control" id="user" placeholder="example@prov.dom" [(ngModel)]="user">
 
     <label for="pswd" class="col-sm-2 col-form-label">Password</label>
-    <input type="password" class="form-control" id="pswd">
+    <input type="password" class="form-control" id="pswd" [(ngModel)]="password">
     <div id="div-button">
-    <a routerLink="/inicio">
-      <button type="submit" class="btn btn-primary mb-3">Login</button>
-    </a>
+    <button type="submit" class="btn btn-primary mb-3" (click)="fazerLogin()">Login</button>
     </div>
   </div>
   </div>

@@ -22,17 +22,17 @@ export class ProdutoService {
     return this._httpClient.get<Produto[]>(this.url);
   }
 
-  addProduct(produto: Produto[]): Observable<Produto[]> {
+  addProduct(produto: Produto): Observable<Produto[]> {
     return this._httpClient.post<Produto[]>(this.url, produto);
   }
 
-  deleteProduct(id:any): Observable<Produto> {
-    const urlIdProduct = `${this.url}?id=${id}`;
-    return this._httpClient.delete<Produto>(urlIdProduct);
+  deleteProduct(id:any): Observable<Produto[]> {
+    const urlIdProduct = `${this.url}/${id}`;
+    return this._httpClient.delete<Produto[]>(urlIdProduct);
   }
 
-  updateProduct(id:any, produto:Produto): Observable<Produto> {
-    const urlIdProduct = `${this.url}?id=${id}`;
-    return this._httpClient.put<Produto>(urlIdProduct, produto);
+  updateProduct(id:any, produto:Produto): Observable<Produto[]> {
+    const urlIdProduct = `${this.url}/${id}`;
+    return this._httpClient.put<Produto[]>(urlIdProduct, produto);
   }
 }
